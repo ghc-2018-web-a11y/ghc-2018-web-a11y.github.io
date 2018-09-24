@@ -1,0 +1,55 @@
+body {
+	margin: 10px 20px;
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+div {
+	margin: 20px 0;
+}
+
+li {
+	padding: 10px 0;
+}
+
+h3 {
+	margin-top: 40px;
+}
+
+.code {
+	font-family: monospace;
+	background-color: #eee;
+	border: 1px solid #999;
+	display: block;
+	padding: 20px;
+	margin: 10px 0;
+}
+
+.code.inline {
+	display: inline;
+	padding: 0 4px;
+}
+
+.hidden {
+	display: none;
+}
+
+.main-task {
+	font-weight: bold;
+}
+
+.solution, blockquote {
+	background-color: #1e90ff14;
+    padding: 10px 20px;
+    border: 1px solid dodgerblue;
+}
+
+button {
+	min-height: 30px;
+	padding: 12px;
+	background: dodgerblue;
+	color: white;
+	font-weight: 500;
+    font-size: 16px;
+}
