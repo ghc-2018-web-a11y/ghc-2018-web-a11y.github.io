@@ -33,6 +33,20 @@ h3 {
 	margin-top: 40px;
 }
 
+table {
+	text-align: left;
+	border-collapse: collapse;
+}
+
+td, th {
+	border: 1px solid black;
+    padding: 2px 20px;
+}
+
+th {
+	background-color: aliceblue;
+}
+
 .code {
 	font-family: monospace;
 	background-color: #eee;
