@@ -9,6 +9,17 @@ div {
 	margin: 20px 0;
 }
 
+h1 {
+	padding-top: 20px;
+}
+
+h2 {
+	margin: 40px -20px 20px;
+	padding: 20px;
+	background: #095fb3;
+	color: white;
+}
+
 li {
 	padding: 10px 0;
 }
