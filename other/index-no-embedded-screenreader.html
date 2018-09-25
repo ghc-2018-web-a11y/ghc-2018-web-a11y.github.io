@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GHC: Web A11y</title>
+  	<!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="main.js"></script> 
+  </head>
+
+  <body>
+    <div class="main">
+        <div class="header">
+            <div class="siteTitle">Site Name</div>
+        </div>
+
+        <div class="mainPage">
+            <div class="orderFormSection">
+                <h2>Header 1</h2>
+                <h3>Subheader 1 Subheader 1 Subheader 1 Subheader 1</h3>
+                <div class="orderFormItemsContainer" id="orderFormItemsContainer">
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="saleLabel">SALE</div>
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="saleLabel">SALE</div>
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orderFormSection">
+                <h2>Header 2</h2>
+                <h3>Subheader 2 Subheader 2 Subheader 2 Subheader 2</h3>
+                <div class="orderFormItemsContainer" id="orderFormItemsContainer">
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="saleLabel">SALE</div>
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="saleLabel">SALE</div>
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="saleLabel">SALE</div>
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                    <div class="imageContainer">
+                        <img class="image" src="https://images.pexels.com/photos/1115090/pexels-photo-1115090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" />
+                        <div class="imageLabel">Label - Price</div>
+                        <div class="buyButton button">BUY</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                Sept 2018<br/>
+                All Rights Reserved
+            </div>
+        </div>
+    </div>
+
+    <!-- This div functions as a modal dialog that pops up when the user clicks the "BUY" button on an item. -->
+    <div class="buyDialog isHidden" id="buyDialog">
+        <div class="buyDialogContent">
+            <div class="dialogCloseButton" id="dialogCloseButton">
+                <svg x="0px" y="0px" viewBox="0 0 96 96" enable-background="new 0 0 96 96">
+                    <polygon points="96,14 82,0 48,34 14,0 0,14 34,48 0,82 14,96 48,62 82,96 96,82 62,48 "/>
+                </svg>
+            </div>
+            <h2>Buy this item</h2>
+            <div class="inputRow">
+                Quantity: <input type="number" />
+            </div>
+            <div class="inputRow">
+                Name: <input type="text" />
+            </div>
+            <div class="inputRow">
+                Email: <input type="email" />
+            </div>
+            <div class="submitButton button" id="submitButton">
+                SUBMIT
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

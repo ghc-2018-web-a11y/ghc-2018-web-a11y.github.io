@@ -1,0 +1,190 @@
+.hide-unless-focused {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+}
+
+.hide-unless-focused:focus {
+    left: 10px;
+    top: 10px;
+}
+
+button#enable-cvox {
+    border: none;
+    border-radius: 4px;
+    font-weight: 100;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    background-color: #2196F3;
+    color: white;
+    z-index: 1000;
+    padding: 2px 7px;
+    font-size: 18px;
+}
+
+body[cvox-enabled] button#enable-cvox {
+    display: none;
+}
+
+div#self-destruct {
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
+
+.blur {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.isBlurred {
+  -webkit-filter: blur(40px);
+  -moz-filter: blur(40px);
+  -o-filter: blur(40px);
+  -ms-filter: blur(40px);
+  filter: blur(40px);
+}
+
+.singleControl {
+  display: inline-block;
+}
+
+.cvoxembed {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.controls {
+  height: 30px;
+  padding: 10px;
+  background: #ffe;
+  display: flex;
+  flex-direction: row;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 11pt;
+}
+
+.controlsContent {
+  float: left;
+  width: 100%;
+}
+
+.controlsContent span {
+  padding-right: 30px;
+}
+
+#caption {
+  flex: 1;
+  padding: 2px 8px;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+  width: 600px;
+  text-align: left;
+  color: white;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 120%;
+}
+
+.volume {
+  height: 24px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+
+.volume input {
+  position: relative;
+  top: 3px;
+  left: 2px;
+}
+
+.cvoxembed select {
+  max-width: 150px;
+}
+
+.cvoxembed button {
+  outline: 0;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+.cvoxembed button#toggle-cvox {
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #2196F3;
+  padding: 2px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 100;
+}
+
+.cvoxembed span#cvox-logo {
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: hsl(29, 92%, 60%);
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.cvoxembed:not([enabled]) span#cvox-logo {
+  background-color: #9E9E9E;
+}
+
+.cvoxembed:not([enabled]) span#cvox-logo img.enabled {
+  display: none;
+}
+
+.cvoxembed[enabled] span#cvox-logo img.enabled {
+  display: initial;
+}
+
+.cvoxembed:not([enabled]) span#cvox-logo img.disabled {
+  display: initial;
+}
+
+.cvoxembed[enabled] span#cvox-logo img.disabled {
+  display: none;
+}
+
+.cvoxembed button#toggle-cvox:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.cvoxembed button#toggle-cvox span {
+  font-size: 18px;
+  color: white;
+  margin: 0px 5px;
+}
+
+.cvoxembed:not([enabled]) button#toggle-cvox span#disable-cvox {
+  display: none;
+}
+
+.cvoxembed[enabled] button#toggle-cvox span#enable-cvox {
+  display: none;
+}
+
+.cvoxembed button {
+  background: #fec;
+}
+
+.cvoxembed button:hover {
+  background: #fda;
+}
+
+.cvoxembed .shade {
+  height: 30px;
+  padding: 10px;
+  background-color: rgba(64, 64, 64, 0.7);
+  display: flex;
+  align-items: center;
+}
