@@ -9,13 +9,22 @@
 
 /* No need to modify the CSS below. */
 body {
+  display: flex;
   margin: 0;
-  padding-bottom: 100px;
   font-family: sans-serif;
 }
 
 h1, h2 {
   margin: 0;
+}
+
+iframe {
+  width: 30%;
+  border: none;
+  border-left: solid 2px lightgray;
+  padding-bottom: 100px;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .main {
@@ -46,6 +55,7 @@ h1, h2 {
   flex-shrink: 1;
   flex-grow: 1;
   overflow: auto;
+  padding-bottom: 100px;
 }
 
 h2 {
@@ -116,9 +126,9 @@ h3 {
 }
 
 .buyDialog {
+  width: 70%;
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
-  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
@@ -169,7 +179,7 @@ h3 {
 }
 
 .pagebody {
-  padding-bottom: 120px;
+  width: 70%;
 }
 
 

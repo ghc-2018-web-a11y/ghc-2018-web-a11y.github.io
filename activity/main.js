@@ -212,12 +212,12 @@ class TabWidget {
   }
 
   // Make a guess
-  function focusFirstTab () {
+  focusFirstTab () {
     tabs[0].focus();
   }
 
   // Make a guess
-  function focusLastTab () {
+  focusLastTab () {
     tabs[tabs.length - 1].focus();
   }
 
