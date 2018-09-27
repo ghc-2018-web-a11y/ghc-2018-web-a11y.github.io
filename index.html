@@ -6,7 +6,7 @@
   <body> 
     <h1>GHC Web Accessibility Workshop</h1>
 
-    <h2>Set Up</h2>
+   	<h2>Set Up</h2>
     The steps below will help you get set up for the activities in this workshop:
     <ol>
       <li>
@@ -26,14 +26,39 @@
       </li>
     </ol>
 
+<button onclick="hideNextNeighbor(this)" aria-expanded="false">Quick Frontend Dev Intro/Refresher</button>
+    <div class="solution" hidden role="presentation">
+    <h3>Text Editors</h3>
+    <ul>
+    	<li>There are many text editors available but for simple HTML/CSS/JS work, you don't need anything complicated - as long as you can edit and save, that's all you'll be needing. Feel free to use what you are already comfortable with or something simple like TextEdit (Mac) or Notepad (Windows)</li>	
+    </ul>
+    <h3>HTML, CSS, JS... 🤔</h3>
+    <p>At the risk of oversimplification:</p>
+    <ul>
+		<li>HTML provides the structure of a page. It describes what a page contains and holds the main bulk of the content. You can think of it as a skeleton. HTML files are of the format *.html. Check out our very own <i>index.html</i>!</li>
+		<li>CSS describes how the page appears both to sighted as well as non-sighted users. People most often use this to make things look nice but you'll see through today's exercises how CSS actually plays a part in describing what is accessible to users. CSS files are of the format *.css. Take a peek at <i>main.css</i>!</li>
+		<li>Javascript (JS) is the 'magic'. It allows sites to do a multitude of things - to respond to user actions, to create
+		and modify what appears on the page. There's a whole lot that it can do and for the purposes of this exercise, we'll be seeing how javascript helps shift focus around the page. JS files are of the format *.js </li>
+	</ul>
+	<h3>Modifying Content</h3>
+	<ul>
+		<li>Open a file (we suggest index.html!) in your text editor of choice</li>
+		<li>Open the same file in Chrome</li>
+		<li>Change something (maybe some text?)</li>
+		<li>Save the file in your text editor</li>
+		<li>Go to the Chrome tab with that file open</li>
+		<li>Refresh the page and see that your changes have appeared!</li>
+	</ul>
+</div>
+
 
 
     <h2>Activity Tips</h2>
     Follow these tips to get the most out of these activities!
     <ul>
-      <li>When you're modifying HTML, do not use inline CSS! This is not best practice, and may result in bugs on this website due to CSS precedence issues.</li>
+      <li>Don't use inline CSS (<span class="code inline">style="color:red;margin:5px;"</span>) when you're modifying HTML! This is not best practice, and may result in bugs on this website due to CSS precedence issues.</li>
       <li>Some of the exercises contain blue buttons with explanations. Read these! They're packed with information.</li>
-      <li>If you get stuck, raise your hand for help, ask your neighbors, or (worst case) take a peak at the answer key located in the <i>solution</i> directory.</li>
+      <li>If you get stuck, raise your hand for help, ask your neighbors, or (worst case) take a peek at the answer key located in the <i>solution</i> directory.</li>
     </ul>
 
 
@@ -81,23 +106,25 @@
       </table>
       <br/><br/>
 
-      Note down any issues or frustrations you experience navigating this website with a screen reader. Are you able to interact with the page using just your keyboard as effectively as a sighted user using a mouse would be able to? Here are some examples you can try:
+      Note down any issues or frustrations you experience navigating this website with a screen reader. 
+      <p> 
+		  <b>Are you able to interact with the page using just your keyboard as effectively as a sighted user using a mouse would be able to?</b>
+  	  </p> 
+  	  Here are some examples you can try:
       <ul>
-        <li>See if you're able to select the "BUY" button to buy an item.</li>
+        <li>Try to select the "BUY" button to buy an item.</li>
         <li>What differences do you notice between using "Previous" and "Next" screen reader shortcuts to navigate the page versus using the "tab" and "shift+tab" keys?</li>
         <li>See if you can tab through each item in the page.</li>
       </ul>
     </p>
 
-    <b>Once you've finished exploring, sit tight and we'll let you know when it's time to do Activity 2 later.</b>
-
-
+    <b>Once you've finished exploring, sit tight and we'll let you know when it's time to start Activity 2!</b>
 
 
     <h2>Activity 2</h2>
-    For this activity, you'll still need the HTML file open in your browser from Activity 1. In addition, make sure you have 3 files (the HTML, Javascript, and CSS files) open in a text editor (see the Set Up section above if you don't already have these open).
+    For this activity, you'll still need the HTML file open in your browser from Activity 1.<br/><br/>Also, make sure you have 3 files (the HTML, Javascript, and CSS files) open in a text editor. Check out the Set Up section at the top of this page if you need help with that!
     <br/><br/>
-    We'll be fixing accessibility issues in this activity. You'll need to use your text editor to make modifications to the HTML, Javascript, and CSS files (but mostly just the HTML). Save these modifications and then refresh the HTML page you have open in your browser to see and test the changes you made.
+    We'll be fixing accessibility issues in this activity. <br/><br/>You'll need to use your text editor to make modifications to the HTML, Javascript, and CSS files (but mostly just the HTML). <br/><br/>To test the changes you have made, save the files and then refresh the HTML page you have open in your browser!
 
     <h3>Exercise 1: Headers</h3>
       <p>
@@ -107,10 +134,10 @@
       Real screenreaders have a variety of keyboard shortcuts used to navigate different kinds of elements on a page (e.g. 'b' might cycle through all buttons, or 'h' through all headers). The heading shortcut is very important for building a mental map of how the page is laid out, and help make the page faster to navigate as users can quickly skip to the content they are interested in. 
     </p>
     <p class="main-task">
-        Use the "heading" button at the bottom of the website to navigate all of the headers on the page. Notice that this allows you to navigate most of the headings on the site -- except for the site title (which reads "Online Garage Sale)! Take a look at the HTML for the headers that to see if you can figure out what's wrong with the site title and fix it.
+        Use the "heading" button at the bottom of the website to navigate all of the headers on the page. Notice that this allows you to navigate most of the headings on the site -- except for the site title (which reads "Online Garage Sale)! Take a look at the HTML for the headers to see if you can figure out what's wrong with the site title and fix it.
       </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden role="presentation">
       <p>
               Text on a page must be identified as a header for a screen reader to recognize it. In the HTML file (index.html), you'll notice that most header text is wrapped in a header tag (h1, h2, h3, etc). If you wrap the site title in h1 tags, it will become navigable using the "heading" button.
@@ -127,7 +154,7 @@
         Try using the 'tab' key to navigate the demo page. You'll notice that the "Hand Painted Jar" cannot be focused. Compare the untabbable element to other elements on the page and see if you can figure out how to make it tabbable.
     </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden>
       <p>
         Some elements, such as buttons and form elements, are tabbable/focusable by default. If you want other HTML elements to be tabbable, (e.g. "div" or "span" which are more often text elements not interacted with by mouse or keyboard) you can give them a tabindex attribute.
@@ -150,7 +177,7 @@
         </ul>
       </p>
       <p>
-        By default, the navigation order for elements on a page is left-to-right and top-to-bottom. A positive tabindex value allows the natural ordering to be modified. This is not recommended, especially for HTML pages with focusable elements (like buttons or input fields), since it results in unexpected jumps in focus. Imagine if hitting tab caused focus to jump from the start of the page to an element at the very bottom of the page (this is especially jarring for fully or partially-sighted users). Instead of manually changing the natural ordering, the actual HTML structure of the page should modified to produce the desired navigation order. 
+        By default, the navigation order for elements on a page is left-to-right and top-to-bottom. A positive tabindex value allows the natural ordering to be modified. This is not recommended, especially for HTML pages with focusable elements (like buttons or input fields), since it results in unexpected jumps in focus. Imagine if hitting tab caused focus to jump from the start of the page to an element at the very bottom of the page (this is especially jarring for fully or partially-sighted users). Instead of manually changing the natural ordering, consider changing the actual HTML structure of the page to produce the desired navigation order. 
       </p>
       </div>
 
@@ -160,9 +187,9 @@
       To buy an item on this page, a user must select the "BUY" button. Users who are using a mouse may select this button using their mouse. Users who are using the keyboard, however, must be able to interact this button by moving focus to it and using the "enter" key to select it.
     </p>
     <p class="main-task">
-      Try using the tab key to navigate to the "BUY" buttons. You'll notice that these buttons cannot gain focus. Since the buttons can't gain focus, a user navigating with a screen reader or keyboard is unable to interact with it. If you hover over one of these buttons with the mouse, you'll also notice that the cursor doesn't change to the "default" cursor that is typical of buttons. Why do you think this might be (hint: take a look at the HTML)? Modify the HTML to see if you can fix the "BUY" buttons.
+      Try using the tab key to navigate to the "BUY" buttons. You'll notice that these buttons cannot gain focus. Since the buttons can't gain focus, a user navigating with a screen reader or keyboard is unable to interact with them. If you hover over one of these buttons with the mouse, you'll also notice that the cursor doesn't change to the "default" cursor that is typical of buttons. Why do you think this might be (hint: take a look at the HTML)? Modify the HTML to see if you can fix the "BUY" buttons.
       </p>
-      <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+      <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden>
       <p>
         These buttons do not work as expected because they are actually "div" elements styled to look like buttons in CSS, not actual buttons. Try changing the buttons on this website from "div" elements to "button" elements. This includes the submitButton, dialogCloseButton, and all buyButton elements. 
@@ -179,7 +206,7 @@
     <p class="main-task">
       An aria-label can be used to attach an alternative description to elements. This is particularly useful when the text inside an element is not sufficient to describe the element, as is commonly the case with icon buttons. Use this attribute to fix the vocalization of the "X" button inside the buy dialog.
     </p>
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden>
       <p>
         Adding "aria-label='Close button'" to the "button" tag should fix the "X" button's vocalization.
@@ -193,7 +220,7 @@
         <p class="main-task">
             Take the first button you modified in exercise 3 (the button corresponding to the elephant figurine), change it back to a div, and add <span class="code inline">aria-role="button"</span> as an attribute. How do you think this might be different from a native button element?
         </p>
-        <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+        <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden>
       <p>
         There are several problems with this button:
@@ -220,7 +247,7 @@
         Try hiding the dialog from screenreaders. There are several different solutions! Hint: Try taking a look at main.css.
       </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden>
       <p>Here are three different solutions to solve this issue:</p>
       <ol>
@@ -260,10 +287,10 @@
       Fix the dialog using a combination of HTML and JavaScript. This exercise is a little tricky, so feel free to click the button below for help and/or take a look at the solution directory!
     </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
     <div class="solution" hidden>
       <p>
-        To fix this, the dialog must have correct labels and keyboard focus must be properly handled. Let's start by learning how to add proper labels to the dialog. First, a dialog must have the role="dialog" attribute. For sighted users, the dialog is identified by, or labelled by, its title. For screen readers to be able to associate the dialog with its title, we must use an aria-labelledby attribute, with a value corresponding to the id of the dialog's title element ("dialogTitle"). This attribute maps the dialog element to its title.
+        To fix this, the dialog must have correct labels and keyboard focus must be properly handled. Let's start by learning how to add proper labels to the dialog. First, a dialog must have the role="dialog" attribute. For sighted users, the dialog is identified by, or labelled by, its title. For screen readers to be able to associate the dialog with its title, we must use an <span class="code inline">aria-labelledby</span> attribute, with a value corresponding to the id of the dialog's title element ("dialogTitle"). This attribute maps the dialog element to its title.
 
         When selecting the "BUY" button, you'll notice that focus remains in the background of the page. For the best user experience, focus should move to inside the dialog. The page's background should not be interactive using a keyboard. The steps below will fix this issue:
         <ol>
@@ -284,13 +311,19 @@
     <h3>Bonus Exercise 8: Advanced ARIA</h3>
     <p>
       ARIA comes in very handy when you're implementing a complex widget for which no native markup exists. For instance, if you're implementing a slider or an autocomplete, you need some way of concisely communicating to the user what the widget does and how to interact with it. 
-
-      You'll notice that at the bottom of the "BUY" dialog is a tab widget. However, without aria roles and properties, screenreader users may not know how to interact with it. Using the ARIA spec, try adding the proper ARIA markup! Hint: You'll need to use javascript to update the markup when the tab selection changes.
+	  <p>
+      You'll notice that at the bottom of the "BUY" dialog is a tab widget. However, without aria roles and properties, screenreader users may not know how to interact with it. Using the ARIA spec, try adding the proper ARIA markup!
+      </p>
+      <p>Hint: You'll need to use javascript to update the markup when the tab selection changes.</p> 
     </p>
 
       <h3>Bonus Exercise 9: Color contrast</h3>
     <p>
-      Even though we've fixed the functionality of the buttons, they're still not quite fully accessible due to their low color contrast. The gray text (#808080) is difficult to discern from the blue (#0000FF) background. To learn more, check out the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a>. Try different color combinations and modify the color or background-color attributes on the buttons to get a better color contrast ratio!
+      Even though we've fixed the functionality of the buttons, they're still not quite fully accessible due to their low color contrast. The gray text (#808080) is difficult to discern from the blue (#0000FF) background. <p>Check out the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> to learn more. </p>    
+
+      <p class="main-task">
+		Try different color combinations and modify the color or background-color attributes on the buttons to get a better color contrast ratio!
+	  </p>
     </p>
     <blockquote>
       <p>
