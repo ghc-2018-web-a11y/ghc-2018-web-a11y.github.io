@@ -29,31 +29,7 @@
         In the <i>activity</i> directory, also open the following files in your favorite text editor: <i>main.js</i>, <i>main.css</i>, <i>index.html</i> (or <i>index_no_screenreader.html</i> depending on the file you opened in Chrome above).
       </li>
     </ol>
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Quick Frontend Dev Intro/Refresher</button>
-    <div class="solution" hidden role="presentation">
-      <h3>Text Editors</h3>
-      <ul>
-        <li>There are many text editors available but for simple HTML/CSS/JS work, you don't need anything complicated - as long as you can edit and save, that's all you'll be needing. Feel free to use what you are already comfortable with or something simple like TextEdit (Mac) or Notepad (Windows)</li>
-      </ul>
-      <h3>HTML, CSS, JS... 🤔</h3>
-      <p>At the risk of oversimplification:</p>
-      <ul>
-        <li>HTML provides the structure of a page. It describes what a page contains and holds the main bulk of the content. You can think of it as a skeleton. HTML files are of the format *.html. Check out our very own <i>index.html</i>!</li>
-        <li>CSS describes how the page appears both to sighted as well as non-sighted users. People most often use this to make things look nice but you'll see through today's exercises how CSS actually plays a part in describing what is accessible to users. CSS files are of the format *.css. Take a peek at <i>main.css</i>!</li>
-        <li>Javascript (JS) is the 'magic'. It allows sites to do a multitude of things - to respond to user actions, to create
-          and modify what appears on the page. There's a whole lot that it can do and for the purposes of this exercise, we'll be seeing how javascript helps shift focus around the page. JS files are of the format *.js 
-        </li>
-      </ul>
-      <h3>Modifying Content</h3>
-      <ul>
-        <li>Open a file (we suggest index.html!) in your text editor of choice</li>
-        <li>Open the same file in Chrome</li>
-        <li>Change something (maybe some text?)</li>
-        <li>Save the file in your text editor</li>
-        <li>Go to the Chrome tab with that file open</li>
-        <li>Refresh the page and see that your changes have appeared!</li>
-      </ul>
-    </div>
+    
     <h2>Activity Tips</h2>
     Follow these tips to get the most out of these activities!
     <ul>
@@ -63,7 +39,7 @@
     </ul>
     <h2>Activity 1</h2>
     <p>
-      You'll be using the <i>index.html</i> (or <i>index_no_embedded_screenreader.html</i>) file you have open in Chrome for this activity. On <i>index.html</i> you should see a lightweight embedded screenreader across the bottom of the page, which we got from an awesome Udacity course on web accessibility (see link in resources below).
+      You'll be using the <i>index.html</i> (or <i>index_no_embedded_screenreader.html</i>) file you have open in Chrome for this activity. On <i>index.html</i> you should see a lightweight embedded screenreader across the bottom of the page, which which was originally built for an awesome Udacity course on web accessibility (see link in resources below).
     </p>
     <p>
       Use just the screen reader shortcuts (displayed in the image below), as well as the <span class="code inline">enter</span>, <span class="code inline">tab</span> and <span class="code inline">shift+tab</span> keys to explore the HTML page you have open in your browser. To simulate how a user relying on a screen reader would interact with the page, don't use your mouse!
@@ -105,26 +81,66 @@
     </table>
     <br/>
     <p>
-      Note down any issues or frustrations you experience navigating this website with a screen reader. 
+      Are you able to interact with the page using just your keyboard as effectively as a sighted user using a mouse would be able to?
     </p>
     <p> 
-      <b>Are you able to interact with the page using just your keyboard as effectively as a sighted user using a mouse would be able to?</b>
+      <b>Remember that there are some things about this page that are purposely broken from an accessibility standpoint. If you notice any, note them down; you'll get a chance to fix some of them in exercise 2.</b>
     </p>
     <p>
       Here are some examples you can try:
     </p>
     <ul>
       <li>Try to select the "BUY" button to buy an item.</li>
+      <li>Try checking the "blur" checkbox at the bottom of the page, then see if you're able to get a feel for the page's structure using the "Previous" and "Next" screen reader shortcuts.</li>
       <li>What differences do you notice between using "Previous" and "Next" screen reader shortcuts to navigate the page versus using the "tab" and "shift+tab" keys?</li>
       <li>See if you can tab through each item in the page.</li>
     </ul>
     <p>
       <b>Once you've finished exploring, sit tight and we'll let you know when it's time to start Activity 2!</b>
     </p>
+
     <h2>Activity 2</h2>
-    For this activity, you'll still need the HTML file open in your browser from Activity 1.<br/><br/>Also, make sure you have 3 files (the HTML, Javascript, and CSS files) open in a text editor. Check out the Set Up section at the top of this page if you need help with that!
-    <br/><br/>
-    We'll be fixing accessibility issues in this activity. <br/><br/>You'll need to use your text editor to make modifications to the HTML, Javascript, and CSS files (but mostly just the HTML). <br/><br/>To test the changes you have made, save the files and then refresh the HTML page you have open in your browser!
+    <p>
+      For this activity, you'll still need the HTML file open in your browser from Activity 1. Also, make sure you have 3 files (the HTML, Javascript, and CSS files) open in a text editor. Check out the Quick Frontend Dev Intro by clicking the button below if you need help with that!
+    </p>      
+    <p>
+      We'll be fixing accessibility issues in this activity.
+    </p>
+    <p>
+      You'll need to use your text editor to make modifications to the HTML, Javascript, and CSS files (but mostly just the HTML). To test the changes you have made, save the files and then refresh the HTML page you have open in your browser.
+    </p>
+
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Quick Frontend Dev Intro/Refresher</button>
+    <div class="solution" hidden role="presentation">
+      <h3>Text Editors</h3>
+      <ul>
+        <li>There are many text editors available but for simple HTML/CSS/JS work, you don't need anything complicated - as long as you can edit and save, that's all you'll be needing. Feel free to use what you are already comfortable with or something simple like TextEdit (Mac) or Notepad (Windows)</li>
+        <ul>
+          <li>
+            Note: If you're using TextEdit, make sure you can edit HTML with it. Go to TextEdit > Preferences > Open and Save tab, and check the box for "Display HTML files as HTML code instead of formatted text"
+          </li>
+        </ul>
+      </ul>
+      <h3>HTML, CSS, JS... 🤔</h3>
+      <p>At the risk of oversimplification:</p>
+      <ul>
+        <li>HTML provides the structure of a page. It describes what a page contains and holds the main bulk of the content. You can think of it as a skeleton. HTML files are of the format *.html. Check out our very own <i>index.html</i>!</li>
+        <li>CSS describes how the page appears both to sighted as well as non-sighted users. People most often use this to make things look nice but you'll see through today's exercises how CSS actually plays a part in describing what is accessible to users. CSS files are of the format *.css. Take a peek at <i>main.css</i>!</li>
+        <li>Javascript (JS) is the 'magic'. It allows sites to do a multitude of things - to respond to user actions, to create
+          and modify what appears on the page. There's a whole lot that it can do and for the purposes of this exercise, we'll be seeing how javascript helps shift focus around the page. JS files are of the format *.js 
+        </li>
+      </ul>
+      <h3>Modifying Content</h3>
+      <ul>
+        <li>Open a file (we suggest index.html!) in your text editor of choice</li>
+        <li>Open the same file in Chrome</li>
+        <li>Change something (maybe some text?)</li>
+        <li>Save the file in your text editor</li>
+        <li>Go to the Chrome tab with that file open</li>
+        <li>Refresh the page and see that your changes have appeared!</li>
+      </ul>
+    </div>
+
     <h3>Exercise 1: Headers</h3>
     <p>
       Screen-reader-users rely on screen readers vocalizing what types of elements they are interacting with (e.g. "button" or "header"). Without these vocalizations, it's more difficult for users to make their way around a page and distinguish between different kinds of content.
@@ -305,7 +321,7 @@
         Dialogs can be much more complex than the example on this page. To learn more about making dialogs compatible with screen readers, check out this <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role" target="_blank">guide</a>.
       </p>
     </div>
-    <h3>Bonus Exercise 8: ARIA Roles and Properties</h3>
+    <h3>Bonus Exercise 8: Advanced ARIA</h3>
     <p>
       ARIA comes in very handy when you're implementing a complex widget for which no native markup exists. For instance, if you're implementing a slider or an autocomplete, you need some way of concisely communicating to the user what the widget does and how to interact with it. 
     </p>
@@ -327,6 +343,9 @@
       <ol>
         <li>Each button should have an <span class="code inline">aria-controls</span> property on it to associate it with its tabpanel. E.g. 
           <span class="code">&lt;button role="tab" aria-controls="returns-tab"&gt;Returns&lt;/button&gt;</span>
+          <p>
+            While this will not have any effect for our simple screenreader, with some screenreaders this will allow users to use a keyboard shortcut to jump between the tab and the content it controls.
+          </p>
         </li>
         <li>
           Ideally, there would be an accessible name for the tabpanel as well. You have a few options for this:
