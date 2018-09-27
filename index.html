@@ -10,7 +10,7 @@
     The steps below will help you get set up for the activities in this workshop:
     <ol>
       <li>
-        Click here to download the workshop materials: <a href="https://github.com/ghc-2018-web-a11y/activities/archive/master.zip">https://github.com/ghc-2018-web-a11y/activities/archive/master.zip</a>
+        Click here to download the workshop materials: <a href="https://github.com/ghc-2018-web-a11y/activities/archive/master.zip" target="_blank">https://github.com/ghc-2018-web-a11y/activities/archive/master.zip</a>
       </li>
       <li>
         Extract the downloaded zip file.
@@ -139,7 +139,7 @@
         Use the "heading" button at the bottom of the website to navigate all of the headers on the page. Notice that this allows you to navigate most of the headings on the site -- except for the site title (which reads "Online Garage Sale)! Take a look at the HTML for the headers to see if you can figure out what's wrong with the site title and fix it.
       </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden role="presentation">
       <p>
               Text on a page must be identified as a header for a screen reader to recognize it. In the HTML file (index.html), you'll notice that most header text is wrapped in a header tag (h1, h2, h3, etc). If you wrap the site title in h1 tags, it will become navigable using the "heading" button.
@@ -156,7 +156,7 @@
         Try using the 'tab' key to navigate the demo page. You'll notice that the "Hand Painted Jar" cannot be focused. Compare the untabbable element to other elements on the page and see if you can figure out how to make it tabbable.
     </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
       <p>
         Some elements, such as buttons and form elements, are tabbable/focusable by default. If you want other HTML elements to be tabbable, (e.g. "div" or "span" which are more often text elements not interacted with by mouse or keyboard) you can give them a tabindex attribute.
@@ -179,7 +179,10 @@
         </ul>
       </p>
       <p>
-        By default, the navigation order for elements on a page is left-to-right and top-to-bottom. A positive tabindex value allows the natural ordering to be modified. This is not recommended, especially for HTML pages with focusable elements (like buttons or input fields), since it results in unexpected jumps in focus. Imagine if hitting tab caused focus to jump from the start of the page to an element at the very bottom of the page (this is especially jarring for fully or partially-sighted users). Instead of manually changing the natural ordering, consider changing the actual HTML structure of the page to produce the desired navigation order. 
+        By default, the navigation order for elements on a page is left-to-right and top-to-bottom. A positive tabindex value allows the natural ordering to be modified. This is not recommended, especially for HTML pages with focusable elements (like buttons or input fields), since it results in unexpected jumps in focus. 
+        <p>
+        	Imagine if hitting tab caused focus to jump from the start of the page to an element at the very bottom of the page (this is especially jarring for fully or partially-sighted users). Instead of manually changing the natural ordering, consider changing the actual HTML structure of the page to produce the desired navigation order. 
+        </p>
       </p>
       </div>
 
@@ -189,9 +192,12 @@
       To buy an item on this page, a user must select the "BUY" button. Users who are using a mouse may select this button using their mouse. Users who are using the keyboard, however, must be able to interact this button by moving focus to it and using the "enter" key to select it.
     </p>
     <p class="main-task">
-      Try using the tab key to navigate to the "BUY" buttons. You'll notice that these buttons cannot gain focus. Since the buttons can't gain focus, a user navigating with a screen reader or keyboard is unable to interact with them. If you hover over one of these buttons with the mouse, you'll also notice that the cursor doesn't change to the "default" cursor that is typical of buttons. Why do you think this might be (hint: take a look at the HTML)? Modify the HTML to see if you can fix the "BUY" buttons.
+      Try using the tab key to navigate to the "BUY" buttons. You'll notice that these buttons cannot gain focus. Since the buttons can't gain focus, a user navigating with a screen reader or keyboard is unable to interact with them.
+   	  <p> 
+    	If you hover over one of these buttons with the mouse, you'll also notice that the cursor doesn't change to the "default" cursor that is typical of buttons. Why do you think this might be (hint: take a look at the HTML)? Modify the HTML to see if you can fix the "BUY" buttons.
       </p>
-      <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+    </p>
+      <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
       <p>
         These buttons do not work as expected because they are actually "div" elements styled to look like buttons in CSS, not actual buttons. Try changing the buttons on this website from "div" elements to "button" elements. This includes the submitButton, dialogCloseButton, and all buyButton elements. 
@@ -208,7 +214,7 @@
     <p class="main-task">
       An aria-label can be used to attach an alternative description to elements. This is particularly useful when the text inside an element is not sufficient to describe the element, as is commonly the case with icon buttons. Use this attribute to fix the vocalization of the "X" button inside the buy dialog.
     </p>
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
       <p>
         Adding "aria-label='Close button'" to the "button" tag should fix the "X" button's vocalization.
@@ -222,7 +228,7 @@
         <p class="main-task">
             Take the first button you modified in exercise 3 (the button corresponding to the elephant figurine), change it back to a div, and add <span class="code inline">aria-role="button"</span> as an attribute. How do you think this might be different from a native button element?
         </p>
-        <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+        <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
       <p>
         There are several problems with this button:
@@ -242,14 +248,16 @@
 
     <h3>Exercise 6: Visibility</h3>
     <p>
-        You have probably noticed that there's an invisible dialog at the bottom of the screen that gets vocalized even though it's not showing. To reproduce this issue, try using tab to navigate though all the items on the page, and notice that there are a few items at the very end that are invisible to the eye, but navigable by screen reader. This is problematic, since non-sighted users will assume that the dialog is visible (and it may not function correctly since the developer did not intend for it to be interacted with in this state), and users with some vision will be confused when an element that they can hear is not visible on the screen.
-      </p>
+        You have probably noticed that there's an invisible dialog at the bottom of the screen that gets vocalized even though it's not showing. To reproduce this issue, try using tab to navigate though all the items on the page, and notice that there are a few items at the very end that are invisible to the eye, but navigable by screen reader. 
+    <p>
+    	This is problematic, since non-sighted users will assume that the dialog is visible (and it may not function correctly since the developer did not intend for it to be interacted with in this state), and users with some vision will be confused when an element that they can hear is not visible on the screen.</p>
+    </p>
 
     <p class="main-task">
         Try hiding the dialog from screenreaders. There are several different solutions! Hint: Try taking a look at main.css.
       </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
       <p>Here are three different solutions to solve this issue:</p>
       <ol>
@@ -265,7 +273,7 @@
           </p>
         </li>
         <li>
-          Hidden attribute: The HTML <span class="code inline">hidden</span> attribute will similarly hide things both visually and from screenreaders. However, there are some limitations on its intended use; see the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">MDN documentation</a> for more details. Also, this attribute will need to be added and removed in Javascript when the dialog is shown or hidden.
+          Hidden attribute: The HTML <span class="code inline">hidden</span> attribute will similarly hide things both visually and from screenreaders. However, there are some limitations on its intended use; see the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden" target="_blank">MDN documentation</a> for more details. Also, this attribute will need to be added and removed in Javascript when the dialog is shown or hidden.
         </li>
         <li>
           Hide from screenreaders with aria-hidden: If for some reason display:none or visibility:hidden cannot be used, the element can also be hidden by adding <span class="code inline">aria-hidden="true"</span> to the div. This attribute will need to be added and removed in Javascript when the dialog is shown or hidden.
@@ -289,7 +297,7 @@
       Fix the dialog using a combination of HTML and JavaScript. This exercise is a little tricky, so feel free to click the button below for help and/or take a look at the solution directory!
     </p>
 
-    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation</button>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
       <p>
         To fix this, the dialog must have correct labels and keyboard focus must be properly handled. Let's start by learning how to add proper labels to the dialog. First, a dialog must have the role="dialog" attribute. For sighted users, the dialog is identified by, or labelled by, its title. For screen readers to be able to associate the dialog with its title, we must use an <span class="code inline">aria-labelledby</span> attribute, with a value corresponding to the id of the dialog's title element ("dialogTitle"). This attribute maps the dialog element to its title.
@@ -302,13 +310,9 @@
           <li>To make sure that a user cannot use "tab" to navigate away from the dialog, we must capture focus inside the dialog. Using javascript, we can make sure that the tab key can't be use to move focus outside the dialog when it's visible.</li>
         </ol>
 
-        Dialogs can be much more complex than the example on this page. To learn more about making dialogs compatible with screen readers, check out this <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role">guide</a>.
+        Dialogs can be much more complex than the example on this page. To learn more about making dialogs compatible with screen readers, check out this <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role" target="_blank">guide</a>.
         </p>
     </div>
-
-    <p>
-      To learn more about accessibility with dialogs, visit https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role.
-    </p>
 
     <h3>Bonus Exercise 8: Advanced ARIA</h3>
     <p>
@@ -316,7 +320,6 @@
 	  <p>
       You'll notice that at the bottom of the "BUY" dialog is a tab widget. However, without aria roles and properties, screenreader users may not know how to interact with it. Using the ARIA spec, try adding the proper ARIA markup!
       </p>
-      <p>Hint: You'll need to use javascript to update the markup when the tab selection changes.</p> 
     </p>
     <p>
       <b>Hint: You'll need to use javascript to update the markup when the tab selection changes.</b>
@@ -331,7 +334,7 @@
 
       <h3>Bonus Exercise 9: Color contrast</h3>
     <p>
-      Even though we've fixed the functionality of the buttons, they're still not quite fully accessible due to their low color contrast. The gray text (#808080) is difficult to discern from the blue (#0000FF) background. <p>Check out the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a> to learn more. </p>    
+      Even though we've fixed the functionality of the buttons, they're still not quite fully accessible due to their low color contrast. The gray text (#808080) is difficult to discern from the blue (#0000FF) background. <p>Check out the <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> to learn more. </p>    
 
       <p class="main-task">
 		Try different color combinations and modify the color or background-color attributes on the buttons to get a better color contrast ratio!
@@ -345,7 +348,7 @@
         Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
         </p>
         <p>
-         source: <a href="https://webaim.org/resources/contrastchecker/">https://webaim.org/resources/contrastchecker/</a>
+         source: <a href="https://webaim.org/resources/contrastchecker/" target="_blank">https://webaim.org/resources/contrastchecker/</a>
         </p>
     </blockquote>
     <p>
@@ -354,7 +357,7 @@
 
     <h2>Learn more</h2>
     <p>
-      If you'd like to learn more about how to create accessible web components, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">MDN documentation on ARIA techniques</a>.
+      If you'd like to learn more about how to create accessible web components, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques" target="_blank">MDN documentation on ARIA techniques</a>.
       </p>
 
     <script>
@@ -372,37 +375,37 @@
     <h3>Resources for later</h3>
     <ul>
       <li>
-        <a href="https://www.udacity.com/course/web-accessibility--ud891">Udacity course on Web Accessibility</a> offers a much more in-depth look at all aspects of web accessibility, and includes hands-on projects.
+        <a href="https://www.udacity.com/course/web-accessibility--ud891" target="_blank">Udacity course on Web Accessibility</a> offers a much more in-depth look at all aspects of web accessibility, and includes hands-on projects.
       </li>
       <li>
-        <a href="https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b">7 Things Every Designer Needs to Know about Accessibility</a> provides a good overview of problematic design patterns.
+        <a href="https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b" target="_blank">7 Things Every Designer Needs to Know about Accessibility</a> provides a good overview of problematic design patterns.
       </li>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">MDN introduction to ARIA</a> has a good introduction to how ARIA works.
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">MDN introduction to ARIA</a> has a good introduction to how ARIA works.
       </li>
       <li>
-        <a href="https://www.w3.org/WAI/WCAG21/quickref/">Web Content Accessibility Guidelines (WCAG)</a> outlines the set of standard guidelines that websites should meet to be accessible, published by W3C.
+        <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">Web Content Accessibility Guidelines (WCAG)</a> outlines the set of standard guidelines that websites should meet to be accessible, published by W3C.
       </li>
     </ul>
 
     <h3>Documentation</h3>
     <ul>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">MDN ARIA attributes cheatsheet</a> is a quick guide to the available ARIA attributes.
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques" target="_blank">MDN ARIA attributes cheatsheet</a> is a quick guide to the available ARIA attributes.
       </li>
       <li>
-        <a href="https://www.w3.org/TR/html-aria/#aria-table">WAI ARIA attributes</a> is a list of the ARIA attributes in the official WAI-ARIA documentation.
+        <a href="https://www.w3.org/TR/html-aria/#aria-table" target="_blank">WAI ARIA attributes</a> is a list of the ARIA attributes in the official WAI-ARIA documentation.
       </li>
       <li>
-        <a href="https://www.w3schools.com/tags/">W3Schools</a> has a list of all available HTML tags.
+        <a href="https://www.w3schools.com/tags/" target="_blank">W3Schools</a> has a list of all available HTML tags.
       </li>
     </ul>
 
     <h3>How to use your screenreader</h3>
     <ul>
-      <li><a href="https://www.apple.com/voiceover/info/guide/_1124.html">Mac users (Voiceover)</a></li>
-      <li><a href="https://webaim.org/articles/nvda/">Windows users (NVDA)</a></li>
-      <li><a href="https://help.gnome.org/users/orca/stable/">Orca Screenreader (Linux)</a> (be aware that Linux does not have a large market share, and none of us have personally tested this screenreader)</li>
+      <li><a href="https://www.apple.com/voiceover/info/guide/_1124.html" target="_blank">Mac users (Voiceover)</a></li>
+      <li><a href="https://webaim.org/articles/nvda/" target="_blank">Windows users (NVDA)</a></li>
+      <li><a href="https://help.gnome.org/users/orca/stable/" target="_blank">Orca Screenreader (Linux)</a> (be aware that Linux does not have a large market share, and none of us have personally tested this screenreader)</li>
     </ul>
   </body>
 </html>
