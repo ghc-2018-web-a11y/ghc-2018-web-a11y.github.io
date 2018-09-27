@@ -236,7 +236,7 @@
       Sometimes, for whatever reason, you can't use the correct native HTML elements. You may need to support legacy browsers that will have issues with the new HTML element, or there are other technical limitations. In these cases, you can use an ARIA role to still get the proper screenreader vocalizations. Let's try it out! 
     </p>
     <p class="main-task">
-      Take the first button you modified in exercise 3 (the button corresponding to the elephant figurine), change it back to a div, and add <span class="code inline">aria-role="button"</span> as an attribute. How do you think this might be different from a native button element?
+      Take the first button you modified in exercise 3 (the button corresponding to the elephant figurine), change it back to a div, and add <span class="code inline">role="button"</span> as an attribute. How do you think this might be different from a native button element?
     </p>
     <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
@@ -249,7 +249,7 @@
         <li>The button does not get clicked if the user uses the enter key (needs to be fixed by adding a javascript event handler)</li>
       </ol>
       <p>
-        The aria-role does make sure that the screenreader vocalizes the div as a button, but, on its own, is not sufficient to make this element behave like a button.
+        The role does make sure that the screenreader vocalizes the div as a button, but, on its own, is not sufficient to make this element behave like a button.
       </p>
       <p>
         Remember that aria labels may change what the screenreader vocalizes, or whether they are navigable using certain screenreader keyboard shortcuts, but they <em>do not affect browser functionality</em>. When you use a role instead of a native element, all the default browser behavior also needs to be replicated. Whenever possible, it's far better to just use a native element instead, which already has all the correct behavior by default. 
