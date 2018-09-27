@@ -281,7 +281,7 @@
           Hidden attribute: The HTML <span class="code inline">hidden</span> attribute will similarly hide things both visually and from screenreaders. However, there are some limitations on its intended use; see the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden" target="_blank">MDN documentation</a> for more details. Also, this attribute will need to be added and removed in Javascript when the dialog is shown or hidden.
         </li>
         <li>
-          Hide from screenreaders with aria-hidden: If for some reason display:none or visibility:hidden cannot be used, the element can also be hidden by adding <span class="code inline">aria-hidden="true"</span> to the div. This attribute will need to be added and removed in Javascript when the dialog is shown or hidden.
+          Hide from screenreaders with aria-hidden: If for some reason display:none or visibility:hidden cannot be used, the element can also be hidden by adding <span class="code inline">aria-hidden="true"</span> to the div. This attribute will need to be added and removed in Javascript when the dialog is shown or hidden (and one of the other approaches is preferable).
         </li>
         </ol>
       </div>
@@ -319,7 +319,7 @@
         </p>
     </div>
 
-    <h3>Bonus Exercise 8: Advanced ARIA</h3>
+    <h3>Bonus Exercise 8: ARIA Roles and Properties</h3>
     <p>
       ARIA comes in very handy when you're implementing a complex widget for which no native markup exists. For instance, if you're implementing a slider or an autocomplete, you need some way of concisely communicating to the user what the widget does and how to interact with it. 
 	  <p>
@@ -331,13 +331,28 @@
     </p>
     <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
     <div class="solution" hidden>
-      <p>Here are the ARIA attributes you should have added:</p>
+      <p>Here are the ARIA roles you should have added:</p>
       <ol>
-        <li>The </li>
+        <li><span class="code inline">role="tablist"</span> on the div containing the buttons</li>
+        <li><span class="code inline">role="tab"</span> on all the buttons</li>
+        <li><span class="code inline">role="tabpanel"</span> on the divs containing the tab contents</li>
+      </ol>
+      <p>For ARIA states and properties:</p>
+      <ol>
+        <li>Each button should have an <span class="code inline">aria-controls</span> property on it to associate it with its tabpanel. E.g. 
+          <span class="code">&lt;button role="tab" aria-controls="returns-tab"&gt;Returns&lt;/button&gt;</span>
+        </li>
+         <li>Ideally, there would be an accessible name for the tabpanel as well. You have a few options for this:
+          <ul>
+            <li>Add an <span class="code inline">aria-label</span>, for example <span class="code inline">aria-label="Returns"</span></li>
+             <li>Similarly, you can use <span class="code inline">aria-labelledby</span> to set the vocalized description to be the same as the default description for another element. For example <span class="code inline">aria-labelledby="returns"</span>, where "returns" is the id of the returns tab. This will vocalize something like "returns, tab" for the tab itself and "returns, tabpanel" for the tabpanel.</li>
+           </ul>
+         </li>
+         <li><span class="code inline">aria-selected="true"</span> should be added to the currently selected tab, and <span class="code inline">aria-selected="false"</span> should be added to all tabs that are not selected. When a new tab is selected, javascript should be used to change this value for all the tabs.</li>
       </ol>
     </div>
 
-      <h3>Bonus Exercise 9: Color contrast</h3>
+    <h3>Bonus Exercise 9: Color contrast</h3>
     <p>
       Even though we've fixed the functionality of the buttons, they're still not quite fully accessible due to their low color contrast. The gray text (#808080) is difficult to discern from the blue (#0000FF) background. <p>Check out the <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> to learn more. </p>    
 
