@@ -67,9 +67,11 @@
     <p>
       You'll be using the <i>index.html</i> (or <i>index_no_embedded_screenreader.html</i>) file you have open in Chrome for this activity.
       <br/><br/>
-      Use just the screen reader shortcuts (displayed below), as well as the <span class="code inline">enter</span>, <span class="code inline">tab</span> and <span class="code inline">shift+tab</span> keys to explore the HTML page you have open in your browser. To simulate how a user relying on a screen reader would interact with the page, don't use your mouse!
+      Use just the screen reader shortcuts (displayed in the image below), as well as the <span class="code inline">enter</span>, <span class="code inline">tab</span> and <span class="code inline">shift+tab</span> keys to explore the HTML page you have open in your browser. To simulate how a user relying on a screen reader would interact with the page, don't use your mouse!
       <br/>
       <img src="screenreader_buttons.png" alt-text="Buttons provided by the screen reader to navigate the page" />
+      <br/><br/>
+      This table contains all the shortcuts you'll need to use as you interact with the page:
       <table>
         <tr>
           <th>Shortcut or button</th>
@@ -104,7 +106,7 @@
           <td>Navigate to previous element</td>
         </tr>
       </table>
-      <br/><br/>
+      <br/>
 
       Note down any issues or frustrations you experience navigating this website with a screen reader. 
       <p> 
@@ -316,6 +318,16 @@
       </p>
       <p>Hint: You'll need to use javascript to update the markup when the tab selection changes.</p> 
     </p>
+    <p>
+      <b>Hint: You'll need to use javascript to update the markup when the tab selection changes.</b>
+    </p>
+    <button onclick="hideNextNeighbor(this)" aria-expanded="false">Explanation - Click this button before the next exercise</button>
+    <div class="solution" hidden>
+      <p>Here are the ARIA attributes you should have added:</p>
+      <ol>
+        <li>The </li>
+      </ol>
+    </div>
 
       <h3>Bonus Exercise 9: Color contrast</h3>
     <p>
@@ -360,26 +372,29 @@
     <h3>Resources for later</h3>
     <ul>
       <li>
-        <a href="https://www.udacity.com/course/web-accessibility--ud891">Free Udacity course on Web Accessibility</a>
+        <a href="https://www.udacity.com/course/web-accessibility--ud891">Udacity course on Web Accessibility</a> offers a much more in-depth look at all aspects of web accessibility, and includes hands-on projects.
       </li>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">MDN introduction to ARIA</a>
+        <a href="https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b">7 Things Every Designer Needs to Know about Accessibility</a> provides a good overview of problematic design patterns.
       </li>
       <li>
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">MDN introduction to ARIA</a> has a good introduction to how ARIA works.
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/WCAG21/quickref/">Web Content Accessibility Guidelines (WCAG)</a> outlines the set of standard guidelines that websites should meet to be accessible, published by W3C.
       </li>
     </ul>
 
     <h3>Documentation</h3>
     <ul>
       <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">MDN ARIA attributes cheatsheet</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">MDN ARIA attributes cheatsheet</a> is a quick guide to the available ARIA attributes.
       </li>
       <li>
-        <a href="https://www.w3.org/TR/html-aria/#aria-table">List of ARIA attributes in official ARIA documentation</a>
+        <a href="https://www.w3.org/TR/html-aria/#aria-table">WAI ARIA attributes</a> is a list of the ARIA attributes in the official WAI-ARIA documentation.
       </li>
       <li>
-        <a href="https://www.w3schools.com/tags/">W3Schools list of HTML tags</a>
+        <a href="https://www.w3schools.com/tags/">W3Schools</a> has a list of all available HTML tags.
       </li>
     </ul>
 
@@ -387,6 +402,7 @@
     <ul>
       <li><a href="https://www.apple.com/voiceover/info/guide/_1124.html">Mac users (Voiceover)</a></li>
       <li><a href="https://webaim.org/articles/nvda/">Windows users (NVDA)</a></li>
+      <li><a href="https://help.gnome.org/users/orca/stable/">Orca Screenreader (Linux)</a> (be aware that Linux does not have a large market share, and none of us have personally tested this screenreader)</li>
     </ul>
   </body>
 </html>
